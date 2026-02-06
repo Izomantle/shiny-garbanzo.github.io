@@ -23,6 +23,9 @@ next_button.addEventListener("click", function(){
     else if (current_page=="endpage.html"){
         window.location.href = "https://www.roblox.com/home"
     }
+    else if (current_page==""){
+        window.location.href = "index.html"
+    }
 })
 
 
