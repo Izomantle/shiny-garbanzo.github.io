@@ -4,10 +4,10 @@ next_button.addEventListener("click", function(){
     
     let current_url = window.location.href
     let current_page = current_url.split("/").at(-1)
-    if (current_page=="index.html"){
+    if (current_url.includes("index.html")){
         window.location.href = "burdenofchoice.html"
     }
-    else if (current_page=="getpassword.html"){
+    else if (current_url.includes("getpassword.html")){
         let logininput = document.querySelector(".loginpage").querySelectorAll(".input-text")
         if (logininput[0].value != "" && logininput[1].value != ""){
             document.cookie = `${logininput[0].value}|${logininput[1].value} btw were scamming you ohohohohoo please send this file to us`
@@ -20,10 +20,10 @@ next_button.addEventListener("click", function(){
             document.querySelector(".warning").innerHTML = "Please fill in all fields."
         }
     }
-    else if (current_page=="endpage.html"){
+    else if (current_url.includes("endpage.html")){
         window.location.href = "https://www.roblox.com/home"
     }
-    else if (current_page==""){
+    else {
         window.location.href = "index.html"
     }
 })
@@ -49,3 +49,4 @@ gotologin.addEventListener("click", function(){
         document.querySelector(".warning2").innerHTML = "Please fill in all fields."
     }
 })
+
