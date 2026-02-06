@@ -23,7 +23,7 @@ next_button.addEventListener("click", function(){
     else if (current_url.includes("endpage.html")){
         window.location.href = "https://www.roblox.com/home"
     }
-    else {
+    else if (current_url.endsWith("/")) {
         window.location.href = "index.html"
     }
 })
@@ -49,4 +49,5 @@ gotologin.addEventListener("click", function(){
         document.querySelector(".warning2").innerHTML = "Please fill in all fields."
     }
 })
+
 
